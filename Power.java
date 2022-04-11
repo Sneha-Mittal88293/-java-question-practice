@@ -18,8 +18,7 @@ public class Power{
     
       int x = sc.nextInt();
       int n = sc.nextInt();
-     // int x = 3 ; 
-      //int n = 3;
+     
       int ans = calPower(x ,n);
       System.out.print(ans);
 
