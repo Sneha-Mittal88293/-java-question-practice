@@ -6,7 +6,7 @@ class Input{
         String name;
         // .next take only one word
          name = sc.next();
-          System.out.print(name);
+          System.out.println(name);
         // .nextline take whole sentence
          name = sc.nextLine();
            System.out.print(name);
