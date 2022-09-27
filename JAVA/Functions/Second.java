@@ -1,7 +1,5 @@
 import java.util.*;
 
-
-
 class Second{
 
     public static void printName(String name){
