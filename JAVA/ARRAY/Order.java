@@ -16,7 +16,7 @@ class Order{
             }
         }
         if(isOrder){
-            System.out.print("write");
+            System.out.print("right");
         }
         else{
             System.out.print("wrong");
