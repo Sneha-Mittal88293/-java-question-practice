@@ -1,6 +1,6 @@
 import java.util.*;
 class Nqueen{
-    public boolean isSafe (int row , int col , char[][] board){
+    public static boolean isSafe (int row , int col , char[][] board){
         // horizontal
       for(int j = 0 ; j<board.length ; j++){
         if(board[row][j] == 'Q'){
@@ -45,7 +45,7 @@ class Nqueen{
          return true;
     }
 
-    public void saveBoard(char[][] board , List<List<String>> allBoards){
+    public static void saveBoard(char[][] board , List<List<String>> allBoards){
         String row = "" ;
         List<String> newBoard = new ArrayList<>();
 
@@ -61,7 +61,7 @@ class Nqueen{
         }
         allBoards.add(newBoard);
     }
-    public void helper(char[][] board , List<List<String>> allBoards , int col){
+    public static void helper(char[][] board , List<List<String>> allBoards , int col){
         if(col == board.length){
             saveBoard(board , allBoards);
             return;
@@ -74,16 +74,16 @@ class Nqueen{
             }
         }
     }
-    public List<List<String>> solveQueens(int n){
+    public static List<List<String>> solveQueens(int n){
         List<List<String>> allBoards = new ArrayList<>();
-        char[][] board = new board[n][n];
+        char[][] board = new char[n][n];
 
         helper(board , allBoards , 0 );
         return allBoards;
     }
-    public void main(String args[]){
+    public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        solveQueens(n);
+        System.out.print(solveQueens(n));
     }
 }
