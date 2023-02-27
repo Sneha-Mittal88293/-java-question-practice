@@ -1,17 +1,16 @@
 import java.util.*;
 
 class Basics{
-    public static boolean Search(int arr[][] ,int key){
+    public static void Search(int arr[][]){
+        int key = Integer.MAX_VALUE;
         for(int i = 0 ; i<arr.length ; i++){
             for(int j =0 ; j<arr[0].length ; j++){
-                if(arr[i][j] == key){
-                    System.out.print("found at" +i +" , "+j);
-                    return true;
+                if(arr[i][j] < key){
+                    key = arr[i][j];
                 }
             }
         }
-        System.out.print("not found");
-        return false;
+        System.out.print(key);
 
     }
     public static void main(String args[]){
@@ -29,7 +28,7 @@ class Basics{
             }
             System.out.println();
         }
-        Search(arr ,11);
+        Search(arr);
 
     }
 }
